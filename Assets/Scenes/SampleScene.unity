@@ -1344,17 +1344,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000011201497078, guid: 620be64fd345b2f4398c1b35e99ed0f2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013468313428, guid: 620be64fd345b2f4398c1b35e99ed0f2, type: 3}
-      propertyPath: useEmulator
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114000013716587956, guid: 620be64fd345b2f4398c1b35e99ed0f2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013716587956, guid: 620be64fd345b2f4398c1b35e99ed0f2, type: 3}
+      propertyPath: skeltonTrackingMode
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 620be64fd345b2f4398c1b35e99ed0f2, type: 3}
