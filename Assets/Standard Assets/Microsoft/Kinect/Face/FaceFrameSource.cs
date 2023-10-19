@@ -1,6 +1,8 @@
 using RootSystem = System;
 using System.Linq;
 using System.Collections.Generic;
+using Windows.Kinect;
+
 namespace Microsoft.Kinect.Face
 {
     //
@@ -17,6 +19,13 @@ namespace Microsoft.Kinect.Face
         {
             _pNative = pNative;
             Microsoft_Kinect_Face_FaceFrameSource_AddRefObject(ref _pNative);
+        }
+
+        public FaceFrameSource(KinectSensor kinectSensor, int v, FaceFrameFeatures faceFrameFeatures)
+        {
+            KinectSensor1 = kinectSensor;
+            V = v;
+            FaceFrameFeatures = faceFrameFeatures;
         }
 
         ~FaceFrameSource()
@@ -150,6 +159,9 @@ namespace Microsoft.Kinect.Face
                 return Helper.NativeObjectCache.CreateOrGetObject<Windows.Kinect.KinectSensor>(objectPointer, n => new Windows.Kinect.KinectSensor(n));
             }
         }
+
+        public KinectSensor KinectSensor1 { get; }
+        public int V { get; }
 
 
         // Events

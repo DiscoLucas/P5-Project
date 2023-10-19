@@ -25,6 +25,7 @@ public class FaceTest : MonoBehaviour
             faceFrameSource = FaceFrameSource.Create(sensor, 0, FaceFrameFeatures.RotationOrientation);
             faceFrameReader = faceFrameSource.OpenReader();
             sensor.Open();
+
         }
         else
         {
