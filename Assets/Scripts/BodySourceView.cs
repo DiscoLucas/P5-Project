@@ -123,6 +123,13 @@ public class BodySourceView : MonoBehaviour
             jointObj.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
             jointObj.name = jt.ToString();
             jointObj.transform.parent = body.transform;
+
+            // Check if the current joint is SpineShoulder, and if so, add a tag.
+            // This for the PlayerManager to get the player's transform.
+            if (jt == Kinect.JointType.SpineShoulder)
+            {
+                jointObj.tag = "PlayerCenter";
+            }
         }
         
         return body;
