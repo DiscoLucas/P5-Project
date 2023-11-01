@@ -8,6 +8,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject BodySourceManager;
     private BodySourceManager bodySourceManager;
 
+    GameObject playerCenter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +19,12 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject playerCenter = GameObject.FindWithTag("PlayerCenter");
 
+        if (playerCenter != null )
+        {
+            Transform transform = playerCenter.transform;
+            
+        }
     }
 }
