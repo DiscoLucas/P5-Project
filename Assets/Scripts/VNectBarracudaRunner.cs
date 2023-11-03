@@ -20,6 +20,8 @@ public class VNectBarracudaRunner : MonoBehaviour
     public VNectModel VNectModel;
 
     public VideoCapture videoCapture;
+    public ColorSourceView colorSourceView;
+    public Texture colorView;
 
     private Model _model;
     private IWorker _worker;
@@ -207,9 +209,9 @@ public class VNectBarracudaRunner : MonoBehaviour
         yield return new WaitForSeconds(WaitTimeModelLoad);
 
         // Init VideoCapture
-        videoCapture.Init(InputImageSize, InputImageSize);
-        Lock = false;
-        Msg.gameObject.SetActive(false);
+        //videoCapture.Init(InputImageSize, InputImageSize);
+        //Lock = false;
+        //Msg.gameObject.SetActive(false);
     }
 
     private const string inputName_1 = "input.1";
@@ -223,12 +225,13 @@ public class VNectBarracudaRunner : MonoBehaviour
 
     private void UpdateVNectModel()
     {
-        input = new Tensor(videoCapture.MainTexture);
+        // input = new Tensor(videoCapture.MainTexture);
+        input = new Tensor(colorView);
         if (inputs[inputName_1] == null)
         {
             inputs[inputName_1] = input;
-            inputs[inputName_2] = new Tensor(videoCapture.MainTexture);
-            inputs[inputName_3] = new Tensor(videoCapture.MainTexture);
+            inputs[inputName_2] = new Tensor(colorView);
+            inputs[inputName_3] = new Tensor(colorView);
         }
         else
         {
@@ -370,5 +373,10 @@ public class VNectBarracudaRunner : MonoBehaviour
         measurement.P.x = KalmanParamR * (measurement.P.x + KalmanParamQ) / (KalmanParamR + measurement.P.x + KalmanParamQ);
         measurement.P.y = KalmanParamR * (measurement.P.y + KalmanParamQ) / (KalmanParamR + measurement.P.y + KalmanParamQ);
         measurement.P.z = KalmanParamR * (measurement.P.z + KalmanParamQ) / (KalmanParamR + measurement.P.z + KalmanParamQ);
+    }
+
+    private void OnApplicationQuit()
+    {
+        
     }
 }
