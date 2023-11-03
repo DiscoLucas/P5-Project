@@ -20,8 +20,7 @@ public class VNectBarracudaRunner : MonoBehaviour
     public VNectModel VNectModel;
 
     public VideoCapture videoCapture;
-    public ColorSourceView colorSourceView;
-    public Texture colorView;
+    public ColorSourceManager colorSourceManager;
 
     private Model _model;
     private IWorker _worker;
@@ -141,6 +140,8 @@ public class VNectBarracudaRunner : MonoBehaviour
 
     private void Start()
     {
+        //Material colorView = GetComponent<Renderer>().material;
+
         // Initialize 
         HeatMapCol_Squared = HeatMapCol * HeatMapCol;
         HeatMapCol_Cube = HeatMapCol * HeatMapCol * HeatMapCol;
@@ -226,12 +227,12 @@ public class VNectBarracudaRunner : MonoBehaviour
     private void UpdateVNectModel()
     {
         // input = new Tensor(videoCapture.MainTexture);
-        input = new Tensor(colorView);
+        input = new Tensor(colorSourceManager.GetColorTexture());
         if (inputs[inputName_1] == null)
         {
             inputs[inputName_1] = input;
-            inputs[inputName_2] = new Tensor(colorView);
-            inputs[inputName_3] = new Tensor(colorView);
+            inputs[inputName_2] = new Tensor(colorSourceManager.GetColorTexture());
+            inputs[inputName_3] = new Tensor(colorSourceManager.GetColorTexture());
         }
         else
         {
