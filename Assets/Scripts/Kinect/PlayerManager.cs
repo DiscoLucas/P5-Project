@@ -6,7 +6,9 @@ using Windows.Kinect;
 public class PlayerManager : MonoBehaviour
 {
 
-    Rigidbody rigidbody;
+    public Rigidbody rigidbody;
+    public GameObject ship;
+    public float deadzone = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,11 @@ public class PlayerManager : MonoBehaviour
         if (playerCenter != null )
         {
             Transform transform = playerCenter.transform;
-            
+            float xAxis = transform.position.x;
+            if ( xAxis > deadzone || xAxis < -deadzone )
+            {
+                rigidbody.AddForce(xAxis, 0, 0);
+            }
             
         }
     }
