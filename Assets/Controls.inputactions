@@ -18,7 +18,7 @@
                     "name": "Strafe",
                     "type": "Value",
                     "id": "f6488539-5bb4-4201-affd-3fa2148b63a9",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
