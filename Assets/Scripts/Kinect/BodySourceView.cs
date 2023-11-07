@@ -129,6 +129,12 @@ public class BodySourceView : MonoBehaviour
             if (jt == Kinect.JointType.SpineShoulder)
             {
                 jointObj.tag = "PlayerCenter";
+
+            }
+
+            if (jt == Kinect.JointType.Head)
+            {
+                jointObj.tag = "PlayerHead";
             }
         }
         

@@ -227,6 +227,7 @@ public class VNectBarracudaRunner : MonoBehaviour
     private void UpdateVNectModel()
     {
         // input = new Tensor(videoCapture.MainTexture);
+        Debug.Log(colorSourceManager.GetColorTexture());
         input = new Tensor(colorSourceManager.GetColorTexture());
         if (inputs[inputName_1] == null)
         {
