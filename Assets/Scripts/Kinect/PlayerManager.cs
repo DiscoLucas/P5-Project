@@ -5,15 +5,13 @@ using Windows.Kinect;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject BodySourceManager;
-    private BodySourceManager bodySourceManager;
 
-    //GameObject playerCenter;
+    Rigidbody rigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (rigidbody == null) { gameObject.AddComponent<Rigidbody>(); }
     }
 
     // Update is called once per frame
@@ -28,12 +26,6 @@ public class PlayerManager : MonoBehaviour
             
         }
     }
-    /*
-    public PlayerTransform(Transform transform)
-    {
-        GameObject playerCenter = GameObject.FindWithTag("PlayerCenter");
-        
-        return;
-    }*/
+
 
 }
