@@ -33,9 +33,7 @@ public class RockThrower : MonoBehaviour
             stunTimer -= Time.deltaTime;
         }
         else
-        {
-            an.enabled = false;
-            
+        {   
             print(stunDirection);
             rb.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, 0, speed);
         }
@@ -49,5 +47,6 @@ public class RockThrower : MonoBehaviour
         //animation part does not work >:(
         an.enabled = true;
         an.Play("Crash");
+        
     }
 }
