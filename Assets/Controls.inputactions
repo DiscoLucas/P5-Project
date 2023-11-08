@@ -6,46 +6,48 @@
             "id": "455490b8-c366-4a28-be20-73077e541ad7",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
-                    "id": "95bccf5c-2326-43fe-9031-3edfaa578f12",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Strafe",
                     "type": "Value",
                     "id": "f6488539-5bb4-4201-affd-3fa2148b63a9",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
+                    "expectedControlType": "Axis",
+                    "processors": "Clamp(min=-5,max=5)",
+                    "interactions": "Press",
                     "initialStateCheck": true
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "d2c3ef0f-1e4d-4b71-a4ab-f6b2e08bd46c",
-                    "path": "",
+                    "name": "1D Axis",
+                    "id": "9f599f68-8673-4c17-8a26-35386211574a",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
-                    "isComposite": false,
+                    "action": "Strafe",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "5fa2c975-3d32-461e-8f9e-34c2e144574b",
-                    "path": "<TrackedDevice>/devicePosition/x",
+                    "name": "negative",
+                    "id": "2a4600a6-505c-49f9-9570-abde51973154",
+                    "path": "<Keyboard>/#(D)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Strafe",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "6d47d67e-6830-40c1-84ee-83c14e548e87",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Strafe",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

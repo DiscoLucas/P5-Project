@@ -824,6 +824,7 @@ MonoBehaviour:
   rigidbody: {fileID: 971292730}
   ship: {fileID: 0}
   deadzone: 1
+  useKinect: 0
 --- !u!4 &971292727
 Transform:
   m_ObjectHideFlags: 0
@@ -833,7 +834,7 @@ Transform:
   m_GameObject: {fileID: 971292725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.305422, y: -7.5084257, z: 28.911007}
+  m_LocalPosition: {x: 0, y: -7.5084257, z: 28.911007}
   m_LocalScale: {x: 3.07, y: 3.07, z: 3.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -867,7 +868,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2a6de095efd15df479b5c380f4ad58fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1181,7 +1182,7 @@ GameObject:
   - component: {fileID: 1732072964}
   m_Layer: 0
   m_Name: Physical display
-  m_TagString: Untagged
+  m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1269,7 +1270,7 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.7, y: -1.9547424, z: -0.6}
   m_LocalScale: {x: 1.6, y: 1, z: 0.9}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -1477,6 +1478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicalDisplay: {fileID: 1732072967}
+  FOVModifier: 8
 --- !u!1 &1988608400
 GameObject:
   m_ObjectHideFlags: 0
