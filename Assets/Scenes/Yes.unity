@@ -908,6 +908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b4e19abf0556a4599a9dc8b6fe7201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 4
+  horizontalSpeed: 5
 --- !u!54 &222983749
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2783,6 +2785,7 @@ GameObject:
   - component: {fileID: 1220567440}
   - component: {fileID: 1220567439}
   - component: {fileID: 1220567438}
+  - component: {fileID: 1220567441}
   m_Layer: 0
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -2819,7 +2822,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1130861485}
   m_OriginBaseGameObject: {fileID: 1220567437}
   m_CameraFloorOffsetObject: {fileID: 1510328094}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!4 &1220567440
 Transform:
@@ -2829,14 +2832,40 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220567437}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 16.02, z: -2.59}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: -2.59, y: 2.42, z: 0}
+  m_LocalScale: {x: 0.8577801, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1510328095}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 222983747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &1220567441
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220567437}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1510328094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,17 +2941,17 @@ PrefabInstance:
     - target: {fileID: 4880092852492129280, guid: 082c37de981c92c4695ee0481b9bdffd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.0000002748074
       objectReference: {fileID: 0}
     - target: {fileID: 4880092852492129280, guid: 082c37de981c92c4695ee0481b9bdffd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70710707
+      value: -0.7071071
       objectReference: {fileID: 0}
     - target: {fileID: 4880092852492129280, guid: 082c37de981c92c4695ee0481b9bdffd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.0000003137885
       objectReference: {fileID: 0}
     - target: {fileID: 4880092852492129280, guid: 082c37de981c92c4695ee0481b9bdffd,
         type: 3}
@@ -2946,6 +2975,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1029896177}
+    - targetCorrespondingSourceObject: {fileID: 4880092852492129280, guid: 082c37de981c92c4695ee0481b9bdffd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1220567440}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 20837667054332308, guid: 082c37de981c92c4695ee0481b9bdffd,
         type: 3}
@@ -2970,4 +3003,3 @@ SceneRoots:
   - {fileID: 494840621}
   - {fileID: 67510903}
   - {fileID: 925794798}
-  - {fileID: 1220567440}
