@@ -62,7 +62,7 @@ public class PlayerManager : MonoBehaviour
 
     void DebugMovement()
     {
-        
+        rigidbody.AddForce(Input.GetAxis("Horizontal"),0, 0);
     }
 
     /*

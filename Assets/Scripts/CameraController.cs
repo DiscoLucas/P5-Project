@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
         if (physicalDisplay == null)
         {
             Camera.main.fieldOfView = fallbackFOV;
-            GameObject.Destroy(this);
+            GetComponent<CameraController>().enabled = false;
         }
         CalculateInitialFOV();
     }
