@@ -4,6 +4,7 @@ using UnityEngine;
 using Windows.Kinect;
 using UnityEngine.InputSystem;
 using System;
+using Unity.VisualScripting;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            //DebugMovement();
+            DebugMovement();
             //OnStrafe();
         }
     }
