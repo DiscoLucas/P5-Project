@@ -32,8 +32,8 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""f6488539-5bb4-4201-affd-3fa2148b63a9"",
                     ""expectedControlType"": ""Axis"",
-                    ""processors"": ""Clamp(min=-5,max=5)"",
-                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""interactions"": """",
                     ""initialStateCheck"": true
                 }
             ],
@@ -41,7 +41,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""9f599f68-8673-4c17-8a26-35386211574a"",
-                    ""path"": ""1DAxis"",
+                    ""path"": ""1DAxis(minValue=-10,maxValue=10)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
