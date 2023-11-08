@@ -6,17 +6,22 @@ public class CameraController : MonoBehaviour
 {
     //public Transform headTracker; // The object representing the user's head position. NOT currently used
     public Transform physicalDisplay; // The object representing the physical display.
+    public GameObject physicalDisplayAlt;
     public float FOVModifier = 4;
     public float fallbackFOV = 60;
 
     private void Start()
     {
-        if (physicalDisplay == null)
+        if (physicalDisplayAlt == null)
         {
             Camera.main.fieldOfView = fallbackFOV;
-            GetComponent<CameraController>().enabled = false;
+            this.enabled = false;
         }
-        CalculateInitialFOV();
+        else
+        {
+            CalculateInitialFOV();
+        }
+        
     }
 
     private void CalculateInitialFOV()

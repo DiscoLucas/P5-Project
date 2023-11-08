@@ -1479,6 +1479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicalDisplay: {fileID: 1732072967}
+  physicalDisplayAlt: {fileID: 0}
   FOVModifier: 8
   fallbackFOV: 60
 --- !u!1 &1988608400
