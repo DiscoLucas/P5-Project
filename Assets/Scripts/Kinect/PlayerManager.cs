@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public Rigidbody rigidbody;
     public float deadzone = 1;
     public float movementSpeed;
+    public float speedModifier;
     public bool useKinect;
 
     Controls controls;
@@ -24,8 +25,8 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         controls = new Controls();
-        controls.Gameplay.Strafe.started += OnStrafeStarted;
-        controls.Gameplay.Strafe.canceled += OnStrafeCanceled;
+        //controls.Gameplay.Strafe.started += OnStrafeStarted;
+        //controls.Gameplay.Strafe.canceled += OnStrafeCanceled;
         controls.Gameplay.Enable();
 
         if (rigidbody == null) { gameObject.AddComponent<Rigidbody>(); }
@@ -41,7 +42,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            //DebugMovement();
+            DebugMovement();
             //OnStrafe();
         }
     }
@@ -64,10 +65,11 @@ public class PlayerManager : MonoBehaviour
 
     void DebugMovement()
     {
-        rigidbody.AddForce(Input.GetAxis("Horizontal"),0, 0);
+        rigidbody.AddForce(Input.GetAxis("Horizontal") * speedModifier,0, 0);
+        rigidbody.MovePosition(transform.position + Vector3.forward * Time.deltaTime * movementSpeed);
     }
-
-    void OnStrafeStarted(InputAction.CallbackContext context)
+    
+    /*void OnStrafeStarted(InputAction.CallbackContext context)
     {
         strafeKeyDown = true;
     }
@@ -83,7 +85,7 @@ public class PlayerManager : MonoBehaviour
         {
             rigidbody.AddForce(Vector3.right * strafeInput * movementSpeed);
         }
-    }
+    }*/
 
     /*
     public void OnStrafe(InputAction.CallbackContext context)

@@ -808,7 +808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &971292726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,9 +822,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 971292730}
-  ship: {fileID: 971292725}
   deadzone: 1
   movementSpeed: 0
+  speedModifier: 1
   useKinect: 0
 --- !u!4 &971292727
 Transform:
