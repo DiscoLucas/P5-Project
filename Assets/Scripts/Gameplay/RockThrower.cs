@@ -10,6 +10,8 @@ public class RockThrower : MonoBehaviour
     public float horizontalSpeed = 10f;
     public float VelocAdd = 10f;
 
+    [SerializeField] private LayerMask collidLayer;
+
     float stunTimer = -1; //magic number lmfaoooo
 
     Rigidbody rb;
@@ -47,10 +49,9 @@ public class RockThrower : MonoBehaviour
         an.Play("Crash");        
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == collidLayer)
         {
             speed += VelocAdd;
             Debug.Log("Balls");

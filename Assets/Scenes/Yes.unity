@@ -2396,6 +2396,9 @@ MonoBehaviour:
   speed: 100
   horizontalSpeed: 40
   VelocAdd: 10
+  collidLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &222983749
 Rigidbody:
   m_ObjectHideFlags: 0
