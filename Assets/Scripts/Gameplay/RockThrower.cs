@@ -8,6 +8,7 @@ public class RockThrower : MonoBehaviour
 {
     public float speed = 15f;
     public float horizontalSpeed = 10f;
+    public float VelocAdd = 10f;
 
     float stunTimer = -1; //magic number lmfaoooo
 
@@ -42,7 +43,16 @@ public class RockThrower : MonoBehaviour
 
         //animation part does not work >:(
         an.enabled = true;
-        an.Play("Crash");
-        
+        an.Play("Crash");        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.layer == 6)
+        {
+            speed += VelocAdd;
+            Debug.Log("Balls");
+        }
     }
 }
