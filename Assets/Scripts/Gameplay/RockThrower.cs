@@ -51,7 +51,7 @@ public class RockThrower : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == collidLayer)
+        if (other.gameObject.layer == 6)
         {
             speed += VelocAdd;
             Debug.Log("Balls");
