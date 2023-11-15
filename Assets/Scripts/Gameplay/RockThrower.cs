@@ -23,7 +23,7 @@ public class RockThrower : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (stunTimer > 0)
         {
@@ -53,6 +53,9 @@ public class RockThrower : MonoBehaviour
         {
             speed += VelocAdd;
             Debug.Log("Balls");
+
+            an.enabled = true;
+            an.Play("Dive");
         }
     }
 }
