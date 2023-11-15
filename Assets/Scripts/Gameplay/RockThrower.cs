@@ -8,6 +8,9 @@ public class RockThrower : MonoBehaviour
 {
     public float speed = 15f;
     public float horizontalSpeed = 10f;
+    public float VelocAdd = 10f;
+
+    [SerializeField] private LayerMask collidLayer;
 
     float stunTimer = -1; //magic number lmfaoooo
 
@@ -22,11 +25,12 @@ public class RockThrower : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (stunTimer > 0)
         {
-            rb.velocity = new Vector3(0, speed/2);
+            rb.AddForce(new Vector3(0, speed / 2), ForceMode.Impulse);
+            //rb.velocity = new Vector3(0, speed/2);
 
             stunTimer -= Time.deltaTime;
         }
@@ -42,7 +46,16 @@ public class RockThrower : MonoBehaviour
 
         //animation part does not work >:(
         an.enabled = true;
-        an.Play("Crash");
-        
+        an.Play("Crash");        
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            speed += VelocAdd;
+            Debug.Log("Balls");
+            an.Play("Dive");
+        }
     }
 }
