@@ -27,7 +27,8 @@ public class RockThrower : MonoBehaviour
     {
         if (stunTimer > 0)
         {
-            rb.velocity = new Vector3(0, speed/2);
+            rb.AddForce(new Vector3(0, speed / 2), ForceMode.Impulse);
+            //rb.velocity = new Vector3(0, speed/2);
 
             stunTimer -= Time.deltaTime;
         }
@@ -53,8 +54,6 @@ public class RockThrower : MonoBehaviour
         {
             speed += VelocAdd;
             Debug.Log("Balls");
-
-            an.enabled = true;
             an.Play("Dive");
         }
     }
