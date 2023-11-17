@@ -9,6 +9,7 @@ public class RockThrower : MonoBehaviour
     public float speed = 15f;
     public float horizontalSpeed = 10f;
     public float VelocAdd = 10f;
+    [SerializeField] private GameObject MC;
 
     [SerializeField] private LayerMask collidLayer;
 
@@ -45,8 +46,8 @@ public class RockThrower : MonoBehaviour
         stunTimer = 1;
 
         //animation part does not work >:(
-        an.enabled = true;
-        an.Play("Crash");        
+        //an.enabled = true;
+        //an.Play("Crash");        
     }
 
     public void OnTriggerEnter(Collider other)
@@ -57,5 +58,10 @@ public class RockThrower : MonoBehaviour
             Debug.Log("Balls");
             an.Play("Dive");
         }
+    }
+
+    private void cameraTrack()
+    {
+
     }
 }
