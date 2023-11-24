@@ -13,6 +13,9 @@ public class RockThrower : MonoBehaviour
 
     [SerializeField] private LayerMask collidLayer;
 
+    [SerializeField] private Transform cam;
+    public float deadzone = 1;
+
     float stunTimer = -1; //magic number lmfaoooo
 
     Rigidbody rb;
@@ -36,9 +39,11 @@ public class RockThrower : MonoBehaviour
             stunTimer -= Time.deltaTime;
         }
         else
-        {   
+        {
             rb.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, 0, speed);
         }
+
+        cameraTrack();
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -62,6 +67,13 @@ public class RockThrower : MonoBehaviour
 
     private void cameraTrack()
     {
+        //Vector3 camX = cam.transform.position;
+        Debug.Log(cam.localPosition.x);
+        float xAxis = cam.localPosition.x;
+        if (xAxis > deadzone || xAxis < -deadzone)
+        {
+            rb.AddForce(xAxis * horizontalSpeed, 0, 0);
+        }
 
     }
 }
