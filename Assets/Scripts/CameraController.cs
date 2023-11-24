@@ -12,8 +12,9 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        if (physicalDisplayAlt == null)
+        if (physicalDisplayAlt.activeInHierarchy == false)
         {
+            Debug.Log("No physical display found. Using fallback FOV");
             Camera.main.fieldOfView = fallbackFOV;
             this.enabled = false;
         }
