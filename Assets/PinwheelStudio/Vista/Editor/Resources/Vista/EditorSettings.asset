@@ -21,10 +21,14 @@ MonoBehaviour:
     m_showGridline: 1
     m_defaultTextureDisplayMode: 1
     m_viewportGradient: 1
-    m_blackRedGradient: {fileID: 2800000, guid: f907e31dc14fade40abc52943ce498c9, type: 3}
-    m_whiteRedGradient: {fileID: 2800000, guid: 40ce0bc628291c347892fd6a4651700c, type: 3}
-    m_blackWhiteGradient: {fileID: 2800000, guid: cecf0b450a4fc5f488c43663b54506c4, type: 3}
-    m_blackRedYellowGreenGradient: {fileID: 2800000, guid: 2e2e5dc2d0eb12d4184918c659214358, type: 3}
+    m_blackRedGradient: {fileID: 2800000, guid: f907e31dc14fade40abc52943ce498c9,
+      type: 3}
+    m_whiteRedGradient: {fileID: 2800000, guid: 40ce0bc628291c347892fd6a4651700c,
+      type: 3}
+    m_blackWhiteGradient: {fileID: 2800000, guid: cecf0b450a4fc5f488c43663b54506c4,
+      type: 3}
+    m_blackRedYellowGreenGradient: {fileID: 2800000, guid: 2e2e5dc2d0eb12d4184918c659214358,
+      type: 3}
     m_rainbowGradient: {fileID: 2800000, guid: 68bf4f3268bc77e4d8287edd2b6f4193, type: 3}
     m_customViewportGradient: {fileID: 0}
   m_troubleshootingSettings:
