@@ -19,6 +19,8 @@ public class PlayerManager : MonoBehaviour
     private float strafeInput;
     private Coroutine strafeRoutine;
     private bool strafeKeyDown = false;
+
+    //XR
     
 
     // Start is called before the first frame update
