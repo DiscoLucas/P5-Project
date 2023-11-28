@@ -19,6 +19,7 @@ public class RockThrower : MonoBehaviour
 
     float stunTimer = -1; //magic number lmfaoooo
     float deflateTime = -1;
+    public float deflateStrenght = -25;
 
     Rigidbody rb;
     Animator an;
@@ -47,7 +48,7 @@ public class RockThrower : MonoBehaviour
 
         if(deflateTime > 0)
         {
-            rb.AddForce(new Vector3(0, -100, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, deflateStrenght, 0), ForceMode.Impulse);
             deflateTime -= Time.deltaTime;
         }
 
@@ -68,7 +69,7 @@ public class RockThrower : MonoBehaviour
         {
             speed += VelocAdd;
             Debug.Log("Balls");
-            deflateTime = 0.3f;
+            deflateTime = 0.6f;
             //an.Play("Dive");
         }
     }
