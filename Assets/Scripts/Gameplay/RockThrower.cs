@@ -15,6 +15,7 @@ public class RockThrower : MonoBehaviour
 
     [SerializeField] private Transform cam;
     public float deadzone = 1;
+    public float camSense;
 
     float stunTimer = -1; //magic number lmfaoooo
 
@@ -69,7 +70,7 @@ public class RockThrower : MonoBehaviour
     {
         //Vector3 camX = cam.transform.position;
         Debug.Log(cam.localPosition.x);
-        float xAxis = cam.localPosition.x;
+        float xAxis = cam.localPosition.x * camSense;
         if (xAxis > deadzone || xAxis < -deadzone)
         {
             rb.AddForce(xAxis * horizontalSpeed, 0, 0);
