@@ -57,7 +57,6 @@ public class RockThrower : MonoBehaviour
     {
         print("hit");
         stunTimer = 1;
-        deflateTime = 1;
         //animation part does not work >:(
         //an.enabled = true;
         //an.Play("Crash");        
