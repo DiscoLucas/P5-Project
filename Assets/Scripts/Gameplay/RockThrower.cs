@@ -18,6 +18,7 @@ public class RockThrower : MonoBehaviour
     public float camSense;
 
     float stunTimer = -1; //magic number lmfaoooo
+    float deflateTime = -1;
 
     Rigidbody rb;
     Animator an;
@@ -44,13 +45,19 @@ public class RockThrower : MonoBehaviour
             rb.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, 0, speed);
         }
 
+        if(deflateTime > 0)
+        {
+            rb.AddForce(new Vector3(0, -100, 0), ForceMode.Impulse);
+            deflateTime -= Time.deltaTime;
+        }
+
         cameraTrack();
     }
     private void OnCollisionEnter(Collision other)
     {
         print("hit");
         stunTimer = 1;
-
+        deflateTime = 1;
         //animation part does not work >:(
         //an.enabled = true;
         //an.Play("Crash");        
@@ -62,7 +69,8 @@ public class RockThrower : MonoBehaviour
         {
             speed += VelocAdd;
             Debug.Log("Balls");
-            an.Play("Dive");
+            deflateTime = 0.3f;
+            //an.Play("Dive");
         }
     }
 
