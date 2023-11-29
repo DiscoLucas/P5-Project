@@ -68,9 +68,8 @@ public class RockThrower : MonoBehaviour
         if (other.gameObject.layer == 6)
         {
             speed += VelocAdd;
-            Debug.Log("Balls");
             deflateTime = 0.6f;
-            //an.Play("Dive");
+            an.SetTrigger("trPlay");
         }
     }
 
