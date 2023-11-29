@@ -6295,7 +6295,7 @@ Transform:
   m_GameObject: {fileID: 760553695}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 89}
+  m_LocalPosition: {x: 0, y: 10, z: 70.6}
   m_LocalScale: {x: 210, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17419,6 +17419,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship VR
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978453964671823133, guid: b077319ae68db8d46b87f78f2740ee2d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978453964671823133, guid: b077319ae68db8d46b87f78f2740ee2d,
+        type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8524508108541904168, guid: b077319ae68db8d46b87f78f2740ee2d,
         type: 3}
