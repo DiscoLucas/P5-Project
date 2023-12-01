@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using System.Threading;
 using UnityEditor.Rendering;
 using UnityEngine;
 
 public class RockThrower : MonoBehaviour
 {
+    public float health = 3;
     public float speed = 15f;
     public float horizontalSpeed = 10f;
     public float VelocAdd = 10f;
@@ -19,7 +21,8 @@ public class RockThrower : MonoBehaviour
 
     float stunTimer = -1; //magic number lmfaoooo
     float deflateTime = -1;
-    public float deflateStrenght = -25;
+    public float deflateStrenght = -3.5f;
+    private Vector3 startPos;
 
     Rigidbody rb;
     Animator an;
@@ -27,6 +30,7 @@ public class RockThrower : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startPos = transform.position;
         rb = GetComponent<Rigidbody>();
         an = GetComponent<Animator>();
     }
@@ -34,6 +38,12 @@ public class RockThrower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Debug.Log(health);
+        if (health <= 0)
+        {
+            health = 3;
+            transform.position = startPos;
+        }
         if (stunTimer > 0)
         {
             rb.AddForce(new Vector3(0, speed / 2), ForceMode.Impulse);
@@ -48,7 +58,8 @@ public class RockThrower : MonoBehaviour
 
         if(deflateTime > 0)
         {
-            rb.AddForce(new Vector3(0, deflateStrenght, 0), ForceMode.Impulse);
+            transform.position += new Vector3(0, deflateStrenght*Time.deltaTime, 0);
+            //rb.AddForce(new Vector3(0, deflateStrenght, 0), ForceMode.Impulse);
             deflateTime -= Time.deltaTime;
         }
 
@@ -57,7 +68,7 @@ public class RockThrower : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         print("hit");
-        stunTimer = 1;
+        //stunTimer = 1;
         //animation part does not work >:(
         //an.enabled = true;
         //an.Play("Crash");        
@@ -76,7 +87,7 @@ public class RockThrower : MonoBehaviour
     private void cameraTrack()
     {
         //Vector3 camX = cam.transform.position;
-        Debug.Log(cam.localPosition.x);
+        //Debug.Log(cam.localPosition.x);
         float xAxis = cam.localPosition.x * camSense;
         if (xAxis > deadzone || xAxis < -deadzone)
         {
