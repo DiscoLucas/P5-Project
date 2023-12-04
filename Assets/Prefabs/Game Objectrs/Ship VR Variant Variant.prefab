@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1e89100e1490f344eb7585789813b866,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1e89100e1490f344eb7585789813b866,
         type: 3}
@@ -97,6 +97,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 9.35
       objectReference: {fileID: 0}
+    - target: {fileID: 2608620755536769036, guid: b077319ae68db8d46b87f78f2740ee2d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.43
+      objectReference: {fileID: 0}
     - target: {fileID: 3211956295386564999, guid: b077319ae68db8d46b87f78f2740ee2d,
         type: 3}
       propertyPath: deflateStrenght
@@ -145,12 +150,12 @@ PrefabInstance:
     - target: {fileID: 8524508108541904168, guid: b077319ae68db8d46b87f78f2740ee2d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 94.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8524508108541904168, guid: b077319ae68db8d46b87f78f2740ee2d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -91.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8524508108541904168, guid: b077319ae68db8d46b87f78f2740ee2d,
         type: 3}
