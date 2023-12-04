@@ -38,6 +38,7 @@ public class RockThrower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        transform.Rotate(rb.velocity.x,0,0);
         Debug.Log(health);
         if (health <= 0)
         {
