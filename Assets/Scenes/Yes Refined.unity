@@ -2680,7 +2680,6 @@ MonoBehaviour:
   deadzone: 1
   camSense: 0
   deflateStrenght: 25
-  startPos: {x: 0, y: 0, z: 0}
 --- !u!4 &338636820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 41c1f0698f46eec45a7015620122db8f,
@@ -24272,6 +24271,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship VR Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137904413468095938, guid: b601305e11de0994f87cd0679efa81f1,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472608908194861400, guid: b601305e11de0994f87cd0679efa81f1,
+        type: 3}
+      propertyPath: speed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5670535721531514359, guid: b601305e11de0994f87cd0679efa81f1,
         type: 3}
