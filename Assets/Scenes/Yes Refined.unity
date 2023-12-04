@@ -24275,12 +24275,27 @@ PrefabInstance:
     - target: {fileID: 1137904413468095938, guid: b601305e11de0994f87cd0679efa81f1,
         type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1472608908194861400, guid: b601305e11de0994f87cd0679efa81f1,
         type: 3}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721464922975807046, guid: b601305e11de0994f87cd0679efa81f1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721464922975807046, guid: b601305e11de0994f87cd0679efa81f1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721464922975807046, guid: b601305e11de0994f87cd0679efa81f1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5670535721531514359, guid: b601305e11de0994f87cd0679efa81f1,
         type: 3}

@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Threading;
+using UnityEditor.Animations;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Filtering;
 
 public class RockThrower : MonoBehaviour
 {
@@ -23,6 +25,8 @@ public class RockThrower : MonoBehaviour
     float deflateTime = -1;
     public float deflateStrenght = -3.5f;
     private Vector3 startPos;
+    private Vector3 lastPos;
+    private float xDiff;
 
     Rigidbody rb;
     Animator an;
@@ -31,13 +35,18 @@ public class RockThrower : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
+        lastPos = startPos;
         rb = GetComponent<Rigidbody>();
         an = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
-    {   
+    {
+        xDiff = lastPos.x - transform.position.x;
+        lastPos = transform.position;
+        an.SetFloat("Steer", xDiff);
+
         if (health <= 0)
         {
             health = 3;
