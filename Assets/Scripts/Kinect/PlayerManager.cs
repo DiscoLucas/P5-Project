@@ -15,7 +15,6 @@ public class PlayerManager : MonoBehaviour
     [Header("speed variables")]
     public float movementSpeed;
     public float longitudinalSpeed;
-    public float lift = 135f;
     public float diveSpeedMulitplier = 2f;
     public float speedModifier;
     [Tooltip("How quickly the ship responds to pitch and roll input")]
@@ -67,7 +66,6 @@ public class PlayerManager : MonoBehaviour
         rb.AddForce(Vector3.up * currentLift, ForceMode.Acceleration);*/
 
         rb.AddForce(transform.forward * longitudinalSpeed);
-        rb.AddForce(Vector3.up * rb.velocity.magnitude * lift);
 
     }
 

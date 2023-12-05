@@ -26,7 +26,8 @@ public class RockThrower : MonoBehaviour
     public float deflateStrenght = -3.5f;
     private Vector3 startPos;
     private Vector3 lastPos;
-    private float xDiff;
+    //private float xDiff;
+    private float zDiff;
 
     Rigidbody rb;
     Animator an;
@@ -43,10 +44,10 @@ public class RockThrower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        xDiff = lastPos.x - transform.position.x;
+        zDiff = lastPos.z - transform.position.z;
         lastPos = transform.position;
-        an.SetFloat("Steer", xDiff);
-
+        an.SetFloat("Steer", zDiff);
+        
         if (health <= 0)
         {
             health = 3;
@@ -61,10 +62,9 @@ public class RockThrower : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, 0, speed);
+            rb.AddForce(speed, 0, -Input.GetAxis("Horizontal") * horizontalSpeed);
         }
-
-        if(deflateTime > 0)
+        if (deflateTime > 0)
         {
             transform.position += new Vector3(0, deflateStrenght*Time.deltaTime, 0);
             //rb.AddForce(new Vector3(0, deflateStrenght, 0), ForceMode.Impulse);
@@ -73,13 +73,19 @@ public class RockThrower : MonoBehaviour
 
         cameraTrack();
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision collision)
     {
         print("hit");
         //stunTimer = 1;
         //animation part does not work >:(
         //an.enabled = true;
-        //an.Play("Crash");        
+        //an.Play("Crash");
+        /*
+        if (collision.gameObject.layer == 7)
+        {
+            var direction = Vector3.Reflect(rb.velocity, collision.contacts[0].normal);
+            rb.AddForce(direction, ForceMode.Impulse);
+        }*/
     }
 
     public void OnTriggerEnter(Collider other)
@@ -91,6 +97,8 @@ public class RockThrower : MonoBehaviour
             an.SetTrigger("trPlay");
         }
     }
+
+ 
 
     private void cameraTrack()
     {
