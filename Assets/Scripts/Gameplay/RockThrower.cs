@@ -32,6 +32,8 @@ public class RockThrower : MonoBehaviour
     Rigidbody rb;
     Animator an;
 
+    InputManager inputManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,9 @@ public class RockThrower : MonoBehaviour
         lastPos = startPos;
         rb = GetComponent<Rigidbody>();
         an = GetComponent<Animator>();
+        rb.velocity = new Vector3(speed, 0, 0); //start with a constant speed
+
+        inputManager = gameObject.GetComponent<InputManager>();
     }
 
     // Update is called once per frame
@@ -62,7 +67,7 @@ public class RockThrower : MonoBehaviour
         }
         else
         {
-            rb.AddForce(speed, 0, -Input.GetAxis("Horizontal") * horizontalSpeed);
+            rb.AddForce(speed, 0, -inputManager.GetHorizontalInput() * horizontalSpeed);
         }
         if (deflateTime > 0)
         {

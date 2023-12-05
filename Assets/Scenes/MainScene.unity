@@ -8639,8 +8639,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 17
-  horizontalSpeed: 40
+  speed: 170
+  horizontalSpeed: 350
   VelocAdd: 10
   MC: {fileID: 0}
   collidLayer:
@@ -8679,7 +8679,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148377983676}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 1
   m_AngularDrag: 0.26
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -13893,6 +13893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652362555398}
   - component: {fileID: 1371219951}
+  - component: {fileID: 919132148377983678}
   - component: {fileID: 1371219953}
   - component: {fileID: 1371219955}
   - component: {fileID: 919132148377983677}
@@ -13926,6 +13927,19 @@ CapsuleCollider:
   m_Height: 17.55
   m_Direction: 2
   m_Center: {x: 0, y: 6.23, z: 0.7}
+--- !u!114 &919132148377983678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148377983676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ccdfbe8a234f5b479bd486bfaef695c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedInput: 0
 --- !u!1 &922424077880697963
 GameObject:
   m_ObjectHideFlags: 0
