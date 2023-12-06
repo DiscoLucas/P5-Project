@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567692070034005887}
-  - component: {fileID: 1564823543310876251}
+  - component: {fileID: 3769534253198302656}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1564823543310876251
+--- !u!114 &3769534253198302656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,14 +41,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 1388859268529536296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62cb2da377ecda244b9a5ade02df6ab0, type: 3}
+  m_Script: {fileID: 11500000, guid: 89245bd0594a57049ab93482cb833682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  soundsArray:
+  - name: RockBreak
+    clip: {fileID: 8300000, guid: c1e97db876e6c5542870472d311d77c0, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: Wind
+    clip: {fileID: 8300000, guid: 1189185bc3e929649803ab3cf81bb5c1, type: 3}
+    volume: 0.3
+    pitch: 1
     spatialBlend: 0
     loop: 0
     source: {fileID: 0}
+  - name: Propella
+    clip: {fileID: 8300000, guid: 55909d5e5b7795f48a3618fade6f2490, type: 3}
+    volume: 0.093
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Wood Creak
+    clip: {fileID: 8300000, guid: 03fccc8990ec51d4fa681deec4a224d5, type: 3}
+    volume: 0.131
+    pitch: 1
+    spatialBlend: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Rock crumble
+    clip: {fileID: 8300000, guid: 5b92d70a54467a64a89bba41fb07a992, type: 3}
+    volume: 0.131
+    pitch: 1
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
+  voiceArray: []

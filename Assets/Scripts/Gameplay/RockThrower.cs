@@ -44,6 +44,10 @@ public class RockThrower : MonoBehaviour
         rb.velocity = new Vector3(speed, 0, 0); //start with a constant speed
 
         inputManager = gameObject.GetComponent<InputManager>();
+
+        FindObjectOfType<AudioManager>().Play("Wind");
+        FindObjectOfType<AudioManager>().Play("Propella");
+
     }
 
     // Update is called once per frame

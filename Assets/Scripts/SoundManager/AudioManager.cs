@@ -47,6 +47,12 @@ public class AudioManager : MonoBehaviour
 	}
 
 
+	void start()
+	{
+		//Play("Wind");
+       // Play("Propella");
+    }
+
 	//To call:
 	//FindObjectOfType<AudioManager>().Play("clip_name");
 	//
