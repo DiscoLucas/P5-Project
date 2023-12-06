@@ -6,6 +6,8 @@ public class AudioManager : MonoBehaviour
 {
 	//Creats the sound array
 	public Sound[] soundsArray;
+	public Voice[] voiceArray;
+
 
     //Singleton pattern
     public static AudioManager instance;
@@ -33,6 +35,14 @@ public class AudioManager : MonoBehaviour
 			s.source.pitch = s.pitch;
             s.source.loop = s.loop;
 			s.source.spatialBlend = s.spatialBlend;
+        }
+
+		foreach (Voice v in voiceArray)
+		{
+            v.source = gameObject.AddComponent<AudioSource>();
+            v.source.clip = v.clip;
+
+            v.source.volume = v.volume;
         }
 	}
 
