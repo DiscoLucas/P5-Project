@@ -2173,6 +2173,105 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 244094032}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &246048314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1388859268529536296, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567692070034005887, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1564823543310876251, guid: d973bfeec28a80448a78b910b9675543, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1388859268529536296, guid: d973bfeec28a80448a78b910b9675543,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 246048316}
+  m_SourcePrefab: {fileID: 100100000, guid: d973bfeec28a80448a78b910b9675543, type: 3}
+--- !u!1 &246048315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388859268529536296, guid: d973bfeec28a80448a78b910b9675543,
+    type: 3}
+  m_PrefabInstance: {fileID: 246048314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &246048316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246048315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89245bd0594a57049ab93482cb833682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsArray:
+  - name: RockBreak
+    clip: {fileID: 8300000, guid: 378d27196c4242b4c8b40dba2ade4285, type: 3}
+    volume: 1
+    pitch: 1
+    spatialBlend: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1001 &279077130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21868,7 +21967,7 @@ MonoBehaviour:
   autoRepaint: 0
   terrainListeners: []
   bounds:
-    m_Center: {x: 10.09198, y: 39.200012, z: 1662.1584}
+    m_Center: {x: 10.09198, y: 102.07889, z: 1662.1584}
     m_Extent: {x: 175, y: 150, z: 1750}
   filterShader: {fileID: 4800000, guid: 0f44df78e3d64d9cb2616cac3d84cb77, type: 3}
 --- !u!4 &1741949673
@@ -24286,7 +24385,7 @@ PrefabInstance:
     - target: {fileID: 1472608908194861400, guid: b601305e11de0994f87cd0679efa81f1,
         type: 3}
       propertyPath: speed
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3721464922975807046, guid: b601305e11de0994f87cd0679efa81f1,
         type: 3}
@@ -24382,3 +24481,4 @@ SceneRoots:
   - {fileID: 62688272}
   - {fileID: 452444411}
   - {fileID: 3934761063338165222}
+  - {fileID: 246048314}
