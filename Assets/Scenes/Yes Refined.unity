@@ -2272,6 +2272,11 @@ MonoBehaviour:
     spatialBlend: 1
     loop: 0
     source: {fileID: 0}
+  voiceArray:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0
+    source: {fileID: 0}
 --- !u!1001 &279077130
 PrefabInstance:
   m_ObjectHideFlags: 0
