@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerCenter
   - PlayerHead
+  - XR Rig
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,19 @@ public class InputManager : MonoBehaviour
     }
     public InputType selectedInput; //list for selecting the input type
 
+    private void Awake()
+    {
+        // disable XR Rig if VR is not selected
+        if (selectedInput != InputType.VR)
+        {
+            GameObject.FindWithTag("XR Rig").SetActive(false);
+        }
+        else
+        {
+            GameObject.FindWithTag("XR Rig").SetActive(true);
+        }
+    }
+
     /// <summary>
     /// Used for getting the horizontal input from the currently selected input type.
     /// </summary>
@@ -23,6 +36,8 @@ public class InputManager : MonoBehaviour
     public float GetHorizontalInput()
     {
         float horizontalAxis = 0f;
+
+        
 
         switch (selectedInput)
         {

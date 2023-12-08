@@ -41,7 +41,7 @@ public class RockThrower : MonoBehaviour
         lastPos = startPos;
         rb = GetComponent<Rigidbody>();
         an = GetComponent<Animator>();
-        rb.velocity = new Vector3(speed, 0, 0); //start with a constant speed
+        //rb.velocity = new Vector3(speed/4, 0, 0); //start with a constant speed
 
         inputManager = gameObject.GetComponent<InputManager>();
 

@@ -1391,6 +1391,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784638535644680025, guid: e0b01acd6410d814089d001b26db1529,
+        type: 3}
+      propertyPath: m_TagString
+      value: XR Rig
+      objectReference: {fileID: 0}
     - target: {fileID: 3584452896663735368, guid: e0b01acd6410d814089d001b26db1529,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8728,8 +8733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 170
-  horizontalSpeed: 350
+  speed: 1000
+  horizontalSpeed: 700
   VelocAdd: 10
   MC: {fileID: 0}
   collidLayer:
@@ -10629,7 +10634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1747301861
 AudioListener:
   m_ObjectHideFlags: 0
@@ -10637,7 +10642,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747301860}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1747301862
 Behaviour:
   m_ObjectHideFlags: 0
