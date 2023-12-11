@@ -112,11 +112,11 @@ public class RockThrower : MonoBehaviour
     private void cameraTrack()
     {
         //Vector3 camX = cam.transform.position;
-        //Debug.Log(cam.localPosition.x);
-        float xAxis = cam.localPosition.x * camSense;
+        //Debug.Log(-cam.localPosition.x);
+        float xAxis = -cam.localPosition.x * camSense;
         if (xAxis > deadzone || xAxis < -deadzone)
         {
-            rb.AddForce(xAxis * horizontalSpeed, 0, 0);
+            rb.AddForce(0, 0, xAxis * horizontalSpeed);
         }
 
     }

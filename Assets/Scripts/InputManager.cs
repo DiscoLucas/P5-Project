@@ -7,6 +7,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     float timePassed;
+    //[SerializeField] private GameObject MainCameraNotVR;
     public enum InputType
     {
         Keyboard,
@@ -21,10 +22,13 @@ public class InputManager : MonoBehaviour
         if (selectedInput != InputType.VR)
         {
             GameObject.FindWithTag("XR Rig").SetActive(false);
+            GameObject.FindWithTag("MainCam").SetActive(true);
+
         }
         else
         {
             GameObject.FindWithTag("XR Rig").SetActive(true);
+            GameObject.FindWithTag("MainCam").SetActive(false);
         }
     }
 
