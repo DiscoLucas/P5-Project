@@ -81,6 +81,11 @@ public class RockThrower : MonoBehaviour
         }
 
         cameraTrack();
+
+        if (zDiff < deadzone)
+        {
+            FindObjectOfType<AudioManager>().Play("Rock crumble");
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
