@@ -12,7 +12,7 @@
     "_tempCollidersAction": 1,
     "_paletteManager": {
         "_selectedPaletteIdx": 0,
-        "_selectedBrushIdx": 0,
+        "_selectedBrushIdx": 1,
         "_showBrushName": false,
         "_viewList": false,
         "_showTabsInMultipleRows": false,
@@ -455,7 +455,9 @@
                     "Player",
                     "GameController",
                     "PlayerCenter",
-                    "PlayerHead"
+                    "PlayerHead",
+                    "XR Rig",
+                    "MainCam"
                 ],
                 "_slopeFilter": {
                     "_v1": 0.0,
@@ -922,7 +924,7 @@
                 "z": 0.0
             },
             "_spacingType": 0,
-            "_minSpacing": 2.0400748252868654,
+            "_minSpacing": 10.654292106628418,
             "_randomizePositions": true,
             "_randomness": 1.0,
             "_simData": {
@@ -2122,7 +2124,9 @@
                     "Player",
                     "GameController",
                     "PlayerCenter",
-                    "PlayerHead"
+                    "PlayerHead",
+                    "XR Rig",
+                    "MainCam"
                 ]
             }
         ],
@@ -2811,7 +2815,7 @@
             },
             "_origin": {
                 "x": 0.0,
-                "y": 31.79601287841797,
+                "y": 37.19037628173828,
                 "z": 0.0
             },
             "_rotation": {
