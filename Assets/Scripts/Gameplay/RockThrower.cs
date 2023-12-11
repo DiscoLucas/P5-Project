@@ -13,7 +13,7 @@ public class RockThrower : MonoBehaviour
     public float speed = 15f;
     public float horizontalSpeed = 10f;
     public float VelocAdd = 10f;
-    [SerializeField] private GameObject MC;
+    //[SerializeField] private GameObject MC;
 
     [SerializeField] private LayerMask collidLayer;
 
