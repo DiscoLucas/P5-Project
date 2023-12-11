@@ -84,7 +84,7 @@ public class RockThrower : MonoBehaviour
 
         if (zDiff < deadzone)
         {
-            FindObjectOfType<AudioManager>().Play("Rock crumble");
+            FindObjectOfType<AudioManager>().Play("Wood Creak");
         }
     }
     private void OnCollisionEnter(Collision collision)
