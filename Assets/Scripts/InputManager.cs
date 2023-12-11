@@ -7,6 +7,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     float timePassed;
+    //[SerializeField] private GameObject MainCameraNotVR;
     public enum InputType
     {
         Keyboard,
@@ -14,6 +15,22 @@ public class InputManager : MonoBehaviour
         Kinect
     }
     public InputType selectedInput; //list for selecting the input type
+
+    private void Awake()
+    {
+        // disable XR Rig if VR is not selected
+        if (selectedInput != InputType.VR)
+        {
+            GameObject.FindWithTag("XR Rig").SetActive(false);
+            GameObject.FindWithTag("MainCam").SetActive(true);
+
+        }
+        else
+        {
+            GameObject.FindWithTag("XR Rig").SetActive(true);
+            GameObject.FindWithTag("MainCam").SetActive(false);
+        }
+    }
 
     /// <summary>
     /// Used for getting the horizontal input from the currently selected input type.
@@ -23,6 +40,8 @@ public class InputManager : MonoBehaviour
     public float GetHorizontalInput()
     {
         float horizontalAxis = 0f;
+
+        
 
         switch (selectedInput)
         {

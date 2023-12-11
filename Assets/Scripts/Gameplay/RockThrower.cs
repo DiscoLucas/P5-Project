@@ -41,9 +41,13 @@ public class RockThrower : MonoBehaviour
         lastPos = startPos;
         rb = GetComponent<Rigidbody>();
         an = GetComponent<Animator>();
-        rb.velocity = new Vector3(speed, 0, 0); //start with a constant speed
+        //rb.velocity = new Vector3(speed/4, 0, 0); //start with a constant speed
 
         inputManager = gameObject.GetComponent<InputManager>();
+
+        FindObjectOfType<AudioManager>().Play("Wind");
+        FindObjectOfType<AudioManager>().Play("Propella");
+
     }
 
     // Update is called once per frame
@@ -77,6 +81,11 @@ public class RockThrower : MonoBehaviour
         }
 
         cameraTrack();
+
+        if (zDiff < deadzone)
+        {
+            FindObjectOfType<AudioManager>().Play("Rock crumble");
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -108,11 +117,11 @@ public class RockThrower : MonoBehaviour
     private void cameraTrack()
     {
         //Vector3 camX = cam.transform.position;
-        //Debug.Log(cam.localPosition.x);
-        float xAxis = cam.localPosition.x * camSense;
+        //Debug.Log(-cam.localPosition.x);
+        float xAxis = -cam.localPosition.x * camSense;
         if (xAxis > deadzone || xAxis < -deadzone)
         {
-            rb.AddForce(xAxis * horizontalSpeed, 0, 0);
+            rb.AddForce(0, 0, xAxis * horizontalSpeed);
         }
 
     }
