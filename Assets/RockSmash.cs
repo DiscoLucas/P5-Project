@@ -25,7 +25,7 @@ public class RockSmash : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "Ship VR Variant") //KÆMPE FEJLKILDE PAS PÅ MED AT RENAME SKIBET
+        if(collision.gameObject.CompareTag("Player")) //KÆMPE FEJLKILDE PAS PÅ MED AT RENAME SKIBET
         {
             mr.enabled = false;
             collider.enabled = false;
