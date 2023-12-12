@@ -31,8 +31,6 @@ public class RockSmash : MonoBehaviour
             collider.enabled = false;
             particle.Play();
             collision.gameObject.GetComponent<RockThrower>().health--;
-            FindObjectOfType<AudioManager>().Play("RockBreak");
-            FindObjectOfType<AudioManager>().Play("Rock crumble");
         }
     }
 }

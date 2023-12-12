@@ -22,7 +22,7 @@ public class RockThrower : MonoBehaviour
     public float camSense;
 
     float stunTimer = -1; //magic number lmfaoooo
-    float deflateTime = -1;
+    public float deflateTime = -1;
     public float deflateStrenght = -3.5f;
     private Vector3 startPos;
     private Vector3 lastPos;
@@ -30,7 +30,7 @@ public class RockThrower : MonoBehaviour
     private float zDiff;
 
     Rigidbody rb;
-    Animator an;
+    public Animator an;
 
     InputManager inputManager;
 
@@ -102,17 +102,6 @@ public class RockThrower : MonoBehaviour
             rb.AddForce(direction, ForceMode.Impulse);
         }*/
     }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 6)
-        {
-            speed += VelocAdd;
-            deflateTime = 0.6f;
-            an.SetTrigger("trPlay");
-        }
-    }
-
  
 
     private void cameraTrack()

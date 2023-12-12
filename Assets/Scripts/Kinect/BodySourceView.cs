@@ -114,6 +114,8 @@ public class BodySourceView : MonoBehaviour
     {
         GameObject body = new GameObject("Body:" + id);
         body.transform.SetParent(parent);
+        //BoxCollider BC = body.GetComponent<BoxCollider>();
+        //BC.enabled = false;
 
         // Positions the object at the parrent's position.
         body.transform.position = transform.position;
@@ -121,6 +123,7 @@ public class BodySourceView : MonoBehaviour
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {
             GameObject jointObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            Destroy(jointObj.GetComponent<BoxCollider>());
             
             LineRenderer lr = jointObj.AddComponent<LineRenderer>();
             lr.SetVertexCount(2);
