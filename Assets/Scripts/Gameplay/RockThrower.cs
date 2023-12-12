@@ -66,12 +66,13 @@ public class RockThrower : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, speed / 2), ForceMode.Impulse);
             //rb.velocity = new Vector3(0, speed/2);
-
             stunTimer -= Time.deltaTime;
         }
         else
         {
-            rb.AddForce(speed, 0, -inputManager.GetHorizontalInput() * horizontalSpeed);
+            
+            float horizontalMovement = -inputManager.GetHorizontalInput();
+            rb.AddForce(speed, 0, horizontalMovement);
         }
         if (deflateTime > 0)
         {

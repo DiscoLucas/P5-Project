@@ -1,11 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] float kinectVModifier;
+    [SerializeField] float keyboardVModifier = 1400f;
+    [SerializeField] float vrVModifier;
     float timePassed;
     //[SerializeField] private GameObject MainCameraNotVR;
     public enum InputType
@@ -49,11 +49,19 @@ public class InputManager : MonoBehaviour
                 return Input.GetAxis("Horizontal");
 
             case InputType.VR:
-                VRInput();
-                break;
+                return VRInput() * vrVModifier;
 
             case InputType.Kinect:
-                KinectInput();
+                GameObject playerCenter = GameObject.FindWithTag("PlayerCenter");
+
+                if (playerCenter != null)
+                {
+                    return KinectInput(playerCenter) * kinectVModifier;
+                }
+                else
+                {
+                    Debug.LogWarning("PlayerCenter not found");
+                }
                 break;
                 
             default:
@@ -71,27 +79,10 @@ public class InputManager : MonoBehaviour
         return camPos;
     }
 
-    private float KinectInput()
+    private float KinectInput(GameObject playerCenter)
     {
-        GameObject playerCenter = GameObject.FindWithTag("PlayerCenter");
-
-        if (playerCenter != null)
-        {
-            Transform transform = playerCenter.transform;
-            float xAxis = transform.localPosition.x;
-            
-            return xAxis;
-        }
-        else
-        {
-            timePassed += Time.deltaTime;
-            if (timePassed > 1f)
-            {
-                Debug.Log("No player center found. Using fallback input 0f");
-            }
-        }
-        
-    
-        return 0f;
+        Transform transform = playerCenter.transform;
+        float xAxis = transform.localPosition.x * kinectVModifier;
+        return xAxis;
     }
 }

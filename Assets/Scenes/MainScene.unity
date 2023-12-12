@@ -1541,6 +1541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoneMaterial: {fileID: 2100000, guid: f2ea145c63353784985576f08398a815, type: 2}
   BodySourceManager: {fileID: 1698423884}
+  parent: {fileID: 543450652362555398}
   jointScale: 1
 --- !u!1001 &114003010
 PrefabInstance:
@@ -15490,7 +15491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 700
+  speed: 0
   horizontalSpeed: 1400
   VelocAdd: 250
   collidLayer:
@@ -24149,6 +24150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ccdfbe8a234f5b479bd486bfaef695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kinectVModifier: 20
+  keyboardVModifier: 1400
+  vrVModifier: 0
   selectedInput: 2
 --- !u!1 &922424077880697963
 GameObject:
