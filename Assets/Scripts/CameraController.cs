@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     public GameObject physicalDisplayAlt;
     public float FOVModifier = 4;
     public float fallbackFOV = 60;
-
+    /*
     private void Start()
     {
         if (physicalDisplayAlt.activeInHierarchy == false)
@@ -20,23 +20,28 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            CalculateInitialFOV();
+            
+            //CalculateInitialFOV();
         }
         
-    }
-
+    }*/
+    /*
     private void CalculateInitialFOV()
     {
         if (physicalDisplay != null)
         {
             // Get the size of the physical display
-            Vector3 displaySize = physicalDisplay.localScale;
+            Vector3 displaySize = new Vector3(36.4f, 25f, 0f);
 
             // Calculate initial FOV
             float aspectRatio = displaySize.x / displaySize.y;
-            Camera.main.fieldOfView = FOVModifier * Mathf.Atan(displaySize.y / (2 * transform.position.z)) * Mathf.Rad2Deg;
+            Camera.main.fieldOfView = FOVModifier * Mathf.Atan(25f / (2 * transform.position.z)) * Mathf.Rad2Deg;
         }
-    }
+        else
+        {
+            Debug.LogError(physicalDisplay + "is null, unable to calculate FOV");
+        }
+    }*/
 
     void Update()
     {
@@ -55,13 +60,14 @@ public class CameraController : MonoBehaviour
             // Update the camera position
             transform.position = cameraPosition;
 
-            float distanceToDisplay = Vector3.Distance(transform.position, displayPosition);
+            //float distanceToDisplay = Vector3.Distance(transform.position, displayPosition);
 
             // Calculate real FOV
-            //float playerFOV = 4f * Mathf.Atan((physicalDisplay.localScale.x * 0.5f) / distanceToDisplay) * Mathf.Rad2Deg;
+            //float playerFOV = FOVModifier * Mathf.Atan((physicalDisplay.localScale.x * 0.5f) / distanceToDisplay) * Mathf.Rad2Deg;
+            //GetComponent<Camera>().fieldOfView = playerFOV;
 
             // update camera to mathc real FOV
-            CalculateInitialFOV();
+            //CalculateInitialFOV();
             transform.LookAt(displayPosition);
 
 
