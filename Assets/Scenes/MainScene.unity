@@ -10130,10 +10130,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 0
+  speed: 700
   horizontalSpeed: 1400
   VelocAdd: 250
-  MC: {fileID: 0}
   collidLayer:
     serializedVersion: 2
     m_Bits: 64

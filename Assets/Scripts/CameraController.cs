@@ -60,11 +60,11 @@ public class CameraController : MonoBehaviour
             // Update the camera position
             transform.position = cameraPosition;
 
-            float distanceToDisplay = Vector3.Distance(transform.position, displayPosition);
+            //float distanceToDisplay = Vector3.Distance(transform.position, displayPosition);
 
             // Calculate real FOV
-            float playerFOV = FOVModifier * Mathf.Atan((physicalDisplay.localScale.x * 0.5f) / distanceToDisplay) * Mathf.Rad2Deg;
-            GetComponent<Camera>().fieldOfView = playerFOV;
+            //float playerFOV = FOVModifier * Mathf.Atan((physicalDisplay.localScale.x * 0.5f) / distanceToDisplay) * Mathf.Rad2Deg;
+            //GetComponent<Camera>().fieldOfView = playerFOV;
 
             // update camera to mathc real FOV
             //CalculateInitialFOV();
