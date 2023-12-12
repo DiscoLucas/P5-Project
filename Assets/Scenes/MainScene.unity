@@ -1951,7 +1951,7 @@ GameObject:
   - component: {fileID: 112136120}
   m_Layer: 0
   m_Name: BodyView
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2516,6 +2516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729552083149745317, guid: e0b01acd6410d814089d001b26db1529,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8561554332322736000, guid: e0b01acd6410d814089d001b26db1529,
         type: 3}
@@ -10016,7 +10021,7 @@ GameObject:
   - component: {fileID: 679549943}
   m_Layer: 0
   m_Name: ColorManager
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12867,7 +12872,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 400
-  field of view: 60
+  field of view: 104
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -13444,7 +13449,7 @@ GameObject:
   - component: {fileID: 934010674}
   m_Layer: 0
   m_Name: ColorView
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14380,7 +14385,7 @@ GameObject:
   - component: {fileID: 1022827880}
   m_Layer: 0
   m_Name: DepthManager
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19598,16 +19603,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  speed: 0
+  speed: 1000
   horizontalSpeed: 1400
-  VelocAdd: 250
+  VelocAdd: 100
   collidLayer:
     serializedVersion: 2
     m_Bits: 64
   cam: {fileID: 82548380}
   deadzone: 0.5
   camSense: 2
-  deflateStrenght: -25
+  deflateStrenght: -10
 --- !u!95 &1371219953
 Animator:
   serializedVersion: 5
@@ -20253,7 +20258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442748201}
   - component: {fileID: 1442748200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20397,7 +20402,7 @@ GameObject:
   - component: {fileID: 1464340101}
   m_Layer: 0
   m_Name: InfraredManager
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22014,7 +22019,7 @@ GameObject:
   - component: {fileID: 1608503455}
   m_Layer: 0
   m_Name: InfraredView
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22895,7 +22900,7 @@ GameObject:
   - component: {fileID: 1698423885}
   m_Layer: 0
   m_Name: BodyManager
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23259,7 +23264,7 @@ GameObject:
   - component: {fileID: 1736670514}
   m_Layer: 0
   m_Name: MultiFrameManager
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27151,7 +27156,7 @@ GameObject:
   - component: {fileID: 1988608401}
   m_Layer: 0
   m_Name: DepthBase
-  m_TagString: Untagged
+  m_TagString: Kinect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29417,8 +29422,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kinectVModifier: 20
   keyboardVModifier: 1400
-  vrVModifier: 0
-  selectedInput: 2
+  vrVModifier: 20
+  selectedInput: 1
 --- !u!1 &922424077880697963
 GameObject:
   m_ObjectHideFlags: 0

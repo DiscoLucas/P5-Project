@@ -8,6 +8,7 @@ TagManager:
   - PlayerHead
   - XR Rig
   - MainCam
+  - Kinect
   layers:
   - Default
   - TransparentFX

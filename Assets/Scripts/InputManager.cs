@@ -23,12 +23,13 @@ public class InputManager : MonoBehaviour
         {
             GameObject.FindWithTag("XR Rig").SetActive(false);
             GameObject.FindWithTag("MainCam").SetActive(true);
-
+            GameObject.FindWithTag("Kinect").SetActive(true);
         }
         else
         {
             GameObject.FindWithTag("XR Rig").SetActive(true);
             GameObject.FindWithTag("MainCam").SetActive(false);
+            GameObject.FindWithTag("Kinect").SetActive(false);
         }
     }
 
