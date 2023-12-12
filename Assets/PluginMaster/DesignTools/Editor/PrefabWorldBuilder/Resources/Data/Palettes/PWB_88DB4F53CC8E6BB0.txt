@@ -228,14 +228,14 @@
             "_restartPatternForEachStroke": true
         },
         {
-            "_id": 638373658106431315,
+            "_id": 638379807778463819,
             "_surfaceDistance": 0.0,
             "_randomSurfaceDistance": true,
             "_randomSurfaceDistanceRange": {
-                "_v1": -10.0,
-                "_v2": 10.0,
-                "_min": -10.0,
-                "_max": 10.0
+                "_v1": 7.0,
+                "_v2": -7.0,
+                "_min": -7.0,
+                "_max": 7.0
             },
             "_embedInSurface": false,
             "_embedAtPivotHeight": true,
@@ -335,7 +335,7 @@
             "_name": "arock",
             "_items": [
                 {
-                    "_id": 638373658106431316,
+                    "_id": 638379807778463820,
                     "_surfaceDistance": 0.0,
                     "_randomSurfaceDistance": false,
                     "_randomSurfaceDistanceRange": {
@@ -443,7 +443,7 @@
                     "_guid": "031f05fcebd6bca45a53c8ee64ca293d",
                     "_prefabPath": "Assets/Prefabs/Game Objectrs/arock.obj",
                     "_frequency": 1.0,
-                    "_parentId": 638373658106431315,
+                    "_parentId": 638379807778463819,
                     "_overwriteThumbnailSettings": false,
                     "_includeInThumbnail": true,
                     "_isAsset2D": false
@@ -1143,10 +1143,10 @@
             "_surfaceDistance": 0.0,
             "_randomSurfaceDistance": false,
             "_randomSurfaceDistanceRange": {
-                "_v1": -0.004999999888241291,
-                "_v2": 0.004999999888241291,
-                "_min": -0.004999999888241291,
-                "_max": 0.004999999888241291
+                "_v1": 7.0,
+                "_v2": -7.0,
+                "_min": -7.0,
+                "_max": 7.0
             },
             "_embedInSurface": false,
             "_embedAtPivotHeight": true,
