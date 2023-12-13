@@ -34,6 +34,7 @@ public class RockThrower : MonoBehaviour
     public Animator an;
 
     InputManager inputManager;
+    WindowDamage windowDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,7 @@ public class RockThrower : MonoBehaviour
         //rb.velocity = new Vector3(speed/4, 0, 0); //start with a constant speed
 
         inputManager = gameObject.GetComponent<InputManager>();
+        windowDamage = gameObject.GetComponent<WindowDamage>();
 
         FindObjectOfType<AudioManager>().Play("Wind");
         FindObjectOfType<AudioManager>().Play("Propella");
@@ -62,7 +64,6 @@ public class RockThrower : MonoBehaviour
         {
             health = 3;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //transform.position = startPos;
         }
         if (stunTimer > 0)
         {
@@ -87,16 +88,15 @@ public class RockThrower : MonoBehaviour
             deflateTime -= Time.deltaTime;
         }
 
-        cameraTrack();
-
-        if (zDiff < deadzone)
-        {
-            //FindObjectOfType<AudioManager>().Play("Wood Creak");
-        }
+        //cameraTrack();
     }
     private void OnCollisionEnter(Collision collision)
     {
         print("hit");
+        if (collision.gameObject.CompareTag("Hazard"))
+        {
+            windowDamage.CrackWindow(health);
+        }
         //stunTimer = 1;
         //animation part does not work >:(
         //an.enabled = true;

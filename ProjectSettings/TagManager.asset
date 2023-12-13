@@ -9,6 +9,7 @@ TagManager:
   - XR Rig
   - MainCam
   - Kinect
+  - Hazard
   layers:
   - Default
   - TransparentFX

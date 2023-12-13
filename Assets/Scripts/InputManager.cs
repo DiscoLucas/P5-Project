@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour
         switch (selectedInput)
         {
             case InputType.Keyboard:
-                return Input.GetAxis("Horizontal");
+                return Input.GetAxis("Horizontal") * keyboardVModifier;
 
             case InputType.VR:
                 return VRInput() * vrVModifier;

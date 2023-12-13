@@ -55,10 +55,11 @@ public class CameraController : MonoBehaviour
             Vector3 displayPosition = physicalDisplay.position;
 
             // Calculate the camera's position relative to the display and head position.
-            Vector3 cameraPosition = displayPosition + (headPosition - displayPosition);
+            //Vector3 cameraPosition = displayPosition + (headPosition - displayPosition);
 
             // Update the camera position
-            transform.position = cameraPosition;
+            transform.position = headPosition;
+            transform.rotation = gameObject.GetComponentInParent<Transform>().rotation;
 
             //float distanceToDisplay = Vector3.Distance(transform.position, displayPosition);
 

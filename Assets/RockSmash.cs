@@ -8,6 +8,7 @@ public class RockSmash : MonoBehaviour
     ParticleSystem particle;
     Collider collider;
     MeshRenderer mr;
+    WindowDamage windowDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class RockSmash : MonoBehaviour
         particle = GetComponent<ParticleSystem>();
         collider = GetComponent<Collider>();
         mr = GetComponent<MeshRenderer>();
+        windowDamage = gameObject.GetComponent<WindowDamage>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class RockSmash : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Player")) //KÆMPE FEJLKILDE PAS PÅ MED AT RENAME SKIBET
+        if(collision.gameObject.CompareTag("Player"))
         {
             mr.enabled = false;
             collider.enabled = false;
