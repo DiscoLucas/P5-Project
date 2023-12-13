@@ -11,7 +11,7 @@ public class ArchAddSpeed : MonoBehaviour
         {
             collision.gameObject.GetComponent<RockThrower>().speed += collision.gameObject.GetComponent<RockThrower>().VelocAdd;
             collision.gameObject.GetComponent<RockThrower>().an.SetTrigger("trPlay");
-            FindObjectOfType<AudioManager>().Play("Wood Creak");
+            AudioManager.instance.Play("Wood Creak");
             collision.gameObject.GetComponent<RockThrower>().deflateTime = 0.6f;
             Destroy(this);
         }

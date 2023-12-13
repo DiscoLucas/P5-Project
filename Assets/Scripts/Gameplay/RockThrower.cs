@@ -95,7 +95,7 @@ public class RockThrower : MonoBehaviour
         print("hit");
         if (collision.gameObject.CompareTag("Hazard"))
         {
-            windowDamage.CrackWindow(health);
+            //windowDamage.CrackWindow(health);
         }
         //stunTimer = 1;
         //animation part does not work >:(

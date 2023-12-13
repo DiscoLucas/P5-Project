@@ -16,7 +16,7 @@ public class RockSmash : MonoBehaviour
         particle = GetComponent<ParticleSystem>();
         collider = GetComponent<Collider>();
         mr = GetComponent<MeshRenderer>();
-        windowDamage = gameObject.GetComponent<WindowDamage>();
+        windowDamage = FindObjectOfType<WindowDamage>();
     }
 
     // Update is called once per frame
@@ -33,8 +33,11 @@ public class RockSmash : MonoBehaviour
             collider.enabled = false;
             particle.Play();
             collision.gameObject.GetComponent<RockThrower>().health--;
-            FindObjectOfType<AudioManager>().Play("RockBreak");
-            FindObjectOfType<AudioManager>().Play("Rock crumble");
+            windowDamage.CrackWindow(collision.gameObject.GetComponent<RockThrower>().health);
+            Debug.Log((collision.gameObject.GetComponent<RockThrower>()!=null)+ " " + (collision.gameObject.GetComponent<RockThrower>().health));
+            Debug.Log((windowDamage != null));
+            AudioManager.instance.Play("RockBreak");
+            AudioManager.instance.Play("Rock crumble");
         }
     }
 }
