@@ -72,9 +72,13 @@ public class RockThrower : MonoBehaviour
         }
         else
         {
-            
             float horizontalMovement = -inputManager.GetHorizontalInput();
-            rb.AddForce(speed, 0, horizontalMovement);
+            if (horizontalMovement > deadzone || horizontalMovement < -deadzone)
+            {
+                rb.AddForce(speed, 0, horizontalMovement);
+            }
+                
+            
         }
         if (deflateTime > 0)
         {

@@ -68,7 +68,7 @@ public class CameraController : MonoBehaviour
 
             // update camera to mathc real FOV
             //CalculateInitialFOV();
-            transform.LookAt(displayPosition);
+            //transform.LookAt(displayPosition);
 
 
         }

@@ -119,6 +119,7 @@ public class BodySourceView : MonoBehaviour
 
         // Positions the object at the parrent's position.
         body.transform.position = transform.position;
+        body.transform.rotation = transform.rotation;
         
         for (Kinect.JointType jt = Kinect.JointType.SpineBase; jt <= Kinect.JointType.ThumbRight; jt++)
         {

@@ -77,7 +77,7 @@ public class InputManager : MonoBehaviour
     private float VRInput()
     {
         float camPos = Camera.main.transform.localPosition.x;
-        return camPos;
+        return camPos * vrVModifier;
     }
 
     private float KinectInput(GameObject playerCenter)
