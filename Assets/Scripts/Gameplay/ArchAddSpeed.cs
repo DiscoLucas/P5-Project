@@ -10,8 +10,8 @@ public class ArchAddSpeed : MonoBehaviour
         if (collision == c)
         {
             collision.gameObject.GetComponent<RockThrower>().speed += collision.gameObject.GetComponent<RockThrower>().VelocAdd;
-            collision.gameObject.GetComponent<RockThrower>().deflateTime = 0.6f;
             collision.gameObject.GetComponent<RockThrower>().an.SetTrigger("trPlay");
+            collision.gameObject.GetComponent<RockThrower>().deflateTime = 0.6f;
             Destroy(this);
         }
     }
