@@ -6,14 +6,14 @@ using UnityEngine;
 public class RockSmash : MonoBehaviour
 {
     ParticleSystem particle;
-    CapsuleCollider collider;
+    Collider collider;
     MeshRenderer mr;
 
     // Start is called before the first frame update
     void Start()
     {
         particle = GetComponent<ParticleSystem>();
-        collider = GetComponent<CapsuleCollider>();
+        collider = GetComponent<Collider>();
         mr = GetComponent<MeshRenderer>();
     }
 

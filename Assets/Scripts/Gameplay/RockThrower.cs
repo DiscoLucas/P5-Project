@@ -6,6 +6,7 @@ using UnityEditor.Animations;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Filtering;
+using UnityEngine.SceneManagement;
 
 public class RockThrower : MonoBehaviour
 {
@@ -60,7 +61,8 @@ public class RockThrower : MonoBehaviour
         if (health <= 0)
         {
             health = 3;
-            transform.position = startPos;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //transform.position = startPos;
         }
         if (stunTimer > 0)
         {
