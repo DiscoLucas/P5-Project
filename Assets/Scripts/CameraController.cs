@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour
         }
     }*/
 
-    void Update()
+    void FixedUpdate()
     {
         GameObject headTracker = GameObject.FindWithTag("PlayerHead");
 
@@ -51,15 +51,15 @@ public class CameraController : MonoBehaviour
         {
 
             // Get the head position and display position.
-            Vector3 headPosition = headTracker.transform.position;
-            Vector3 displayPosition = physicalDisplay.position;
+            //Vector3 headPosition = headTracker.transform.position;
+            //Vector3 displayPosition = physicalDisplay.position;
 
             // Calculate the camera's position relative to the display and head position.
             //Vector3 cameraPosition = displayPosition + (headPosition - displayPosition);
 
             // Update the camera position
-            transform.position = headPosition;
-            transform.rotation = gameObject.GetComponentInParent<Transform>().rotation;
+            transform.position = headTracker.transform.position;
+            //transform.rotation = gameObject.GetComponentInParent<Transform>().rotation;
 
             //float distanceToDisplay = Vector3.Distance(transform.position, displayPosition);
 

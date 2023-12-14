@@ -125,6 +125,7 @@ public class BodySourceView : MonoBehaviour
         {
             GameObject jointObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Destroy(jointObj.GetComponent<BoxCollider>());
+            Destroy(jointObj.GetComponent<MeshRenderer>());
             
             LineRenderer lr = jointObj.AddComponent<LineRenderer>();
             lr.SetVertexCount(2);

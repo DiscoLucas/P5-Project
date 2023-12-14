@@ -44788,6 +44788,7 @@ GameObject:
   - component: {fileID: 3686876415578110936}
   - component: {fileID: 6880888008918593887}
   - component: {fileID: 3876343015764127655}
+  - component: {fileID: 84967556442177927}
   - component: {fileID: 34120121747027162}
   m_Layer: 0
   m_Name: Wide_Rock 1 (5)
@@ -49727,6 +49728,29 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!136 &84967556442177927
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829670388351913898}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.45
+  m_Height: 5.36
+  m_Direction: 2
+  m_Center: {x: -0.17, y: -0.44, z: 0.025399782}
 --- !u!65 &34120121747027162
 BoxCollider:
   m_ObjectHideFlags: 0
